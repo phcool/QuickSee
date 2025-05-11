@@ -1,0 +1,289 @@
+2025-05-10 12:29:20 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 12:29:20 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 12:32:15 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 12:32:15 [INFO] faiss.loader: Loading faiss.
+2025-05-10 12:32:15 [INFO] faiss.loader: Successfully loaded faiss.
+2025-05-10 12:32:15 [INFO] faiss: Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-05-10 12:32:15 [ERROR] app.llm.llm_integration: 没有可用的LLM实现！请确保至少一种实现已正确安装。
+2025-05-10 12:32:31 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 12:32:31 [INFO] faiss.loader: Loading faiss.
+2025-05-10 12:32:31 [INFO] faiss.loader: Successfully loaded faiss.
+2025-05-10 12:32:31 [INFO] faiss: Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-05-10 12:32:32 [ERROR] app.llm.llm_integration: 没有可用的LLM实现！请确保至少一种实现已正确安装。
+2025-05-10 12:32:33 [ERROR] app.llm.llm_integration: 使用阿里云SDK获取多个向量嵌入出错: name 'alibaba_llm_service' is not defined
+2025-05-10 12:32:44 [ERROR] app.llm.llm_integration: 使用阿里云SDK获取向量嵌入出错: name 'alibaba_llm_service' is not defined
+2025-05-10 12:32:44 [ERROR] app.llm.llm_integration: 使用阿里云SDK生成RAG响应出错: name 'alibaba_llm_service' is not defined
+2025-05-10 12:39:02 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 12:40:59 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 12:41:04 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 400 Bad Request"
+2025-05-10 12:41:04 [ERROR] app.llm.llm: Embedding API error: Error code: 400 - {'error': {'code': 'InvalidParameter', 'param': None, 'message': '<400> InternalError.Algo.InvalidParameter: Value error, batch size is invalid, it should not be larger than 10.: input.contents', 'type': 'InvalidParameter'}, 'id': '9066bbaa-1344-9106-8504-12a4a7c7e8c7', 'request_id': '9066bbaa-1344-9106-8504-12a4a7c7e8c7'}
+2025-05-10 12:41:04 [ERROR] app.llm.llm_integration: 获取向量嵌入失败
+2025-05-10 12:42:40 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 12:42:44 [INFO] app.llm.llm_integration: 处理嵌入批次 1/10, 大小: 10
+2025-05-10 12:42:46 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:42:46 [INFO] app.llm.llm_integration: 处理嵌入批次 2/10, 大小: 10
+2025-05-10 12:42:48 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:42:48 [INFO] app.llm.llm_integration: 处理嵌入批次 3/10, 大小: 10
+2025-05-10 12:42:49 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:42:49 [INFO] app.llm.llm_integration: 处理嵌入批次 4/10, 大小: 10
+2025-05-10 12:42:50 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:42:51 [INFO] app.llm.llm_integration: 处理嵌入批次 5/10, 大小: 10
+2025-05-10 12:42:52 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:42:52 [INFO] app.llm.llm_integration: 处理嵌入批次 6/10, 大小: 10
+2025-05-10 12:42:53 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:42:54 [INFO] app.llm.llm_integration: 处理嵌入批次 7/10, 大小: 10
+2025-05-10 12:42:55 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:42:55 [INFO] app.llm.llm_integration: 处理嵌入批次 8/10, 大小: 10
+2025-05-10 12:42:56 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:42:56 [INFO] app.llm.llm_integration: 处理嵌入批次 9/10, 大小: 10
+2025-05-10 12:42:58 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:42:58 [INFO] app.llm.llm_integration: 处理嵌入批次 10/10, 大小: 10
+2025-05-10 12:42:59 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:42:59 [INFO] app.vectordb.faiss_store: 将 100 个嵌入添加到FAISS索引...
+2025-05-10 12:42:59 [INFO] app.vectordb.faiss_store: 成功添加并保存 100 篇文章到索引
+2025-05-10 12:45:57 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 12:45:58 [INFO] app.llm.llm_integration: 处理嵌入批次 1/10, 大小: 10
+2025-05-10 12:46:01 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:46:01 [INFO] app.llm.llm_integration: 处理嵌入批次 2/10, 大小: 10
+2025-05-10 12:46:03 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:46:03 [INFO] app.llm.llm_integration: 处理嵌入批次 3/10, 大小: 10
+2025-05-10 12:46:04 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:46:04 [INFO] app.llm.llm_integration: 处理嵌入批次 4/10, 大小: 10
+2025-05-10 12:46:05 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:46:05 [INFO] app.llm.llm_integration: 处理嵌入批次 5/10, 大小: 10
+2025-05-10 12:46:06 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:46:07 [INFO] app.llm.llm_integration: 处理嵌入批次 6/10, 大小: 10
+2025-05-10 12:46:08 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:46:08 [INFO] app.llm.llm_integration: 处理嵌入批次 7/10, 大小: 10
+2025-05-10 12:46:09 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:46:10 [INFO] app.llm.llm_integration: 处理嵌入批次 8/10, 大小: 10
+2025-05-10 12:46:11 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:46:11 [INFO] app.llm.llm_integration: 处理嵌入批次 9/10, 大小: 10
+2025-05-10 12:46:12 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:46:13 [INFO] app.llm.llm_integration: 处理嵌入批次 10/10, 大小: 10
+2025-05-10 12:46:14 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:46:14 [INFO] app.vectordb.faiss_store: 将 100 个嵌入添加到FAISS索引...
+2025-05-10 12:46:14 [INFO] app.vectordb.faiss_store: 成功添加并保存 100 篇文章到索引
+2025-05-10 12:46:31 [INFO] app.llm.llm_integration: 处理嵌入批次 1/1, 大小: 1
+2025-05-10 12:46:32 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:46:33 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-05-10 12:46:33 [ERROR] app.llm.llm: LLM API error: Error code: 404 - {'error': {'message': 'The model `qwen-3` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}, 'request_id': 'cf986cfd-18d6-9cae-8c3f-7578091445e3'}
+2025-05-10 12:48:55 [INFO] app.llm.llm_integration: 处理嵌入批次 1/1, 大小: 1
+2025-05-10 12:48:56 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:48:57 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-05-10 12:48:57 [ERROR] app.llm.llm: LLM API error: Error code: 404 - {'error': {'message': 'The model `qwen-3` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}, 'request_id': '12649292-96a2-917c-a201-995b4c4bcb88'}
+2025-05-10 12:49:20 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 12:49:53 [INFO] app.llm.llm_integration: 处理嵌入批次 1/1, 大小: 1
+2025-05-10 12:49:55 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:49:56 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 12:51:24 [INFO] app.llm.llm_integration: 处理嵌入批次 1/1, 大小: 1
+2025-05-10 12:51:26 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:51:28 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 12:53:28 [INFO] app.llm.llm_integration: 处理嵌入批次 1/1, 大小: 1
+2025-05-10 12:53:30 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:53:31 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 12:55:03 [INFO] app.llm.llm_integration: 处理嵌入批次 1/1, 大小: 1
+2025-05-10 12:55:50 [INFO] openai._base_client: Retrying request to /embeddings in 0.433806 seconds
+2025-05-10 12:55:52 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 12:55:53 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 13:07:53 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 13:08:03 [INFO] app.llm.llm_integration: 处理嵌入批次 1/1, 大小: 1
+2025-05-10 13:08:04 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:08:05 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 13:13:59 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 13:14:03 [INFO] app.llm.llm_integration: 处理嵌入批次 1/63, 大小: 10
+2025-05-10 13:14:06 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:14:07 [INFO] app.llm.llm_integration: 处理嵌入批次 2/63, 大小: 10
+2025-05-10 13:14:08 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:14:08 [INFO] app.llm.llm_integration: 处理嵌入批次 3/63, 大小: 10
+2025-05-10 13:14:10 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:14:10 [INFO] app.llm.llm_integration: 处理嵌入批次 4/63, 大小: 10
+2025-05-10 13:14:11 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:14:12 [INFO] app.llm.llm_integration: 处理嵌入批次 5/63, 大小: 10
+2025-05-10 13:14:13 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:14:13 [INFO] app.llm.llm_integration: 处理嵌入批次 6/63, 大小: 10
+2025-05-10 13:14:14 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:14:15 [INFO] app.llm.llm_integration: 处理嵌入批次 7/63, 大小: 10
+2025-05-10 13:14:16 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:14:17 [INFO] app.llm.llm_integration: 处理嵌入批次 8/63, 大小: 10
+2025-05-10 13:14:18 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:14:18 [INFO] app.llm.llm_integration: 处理嵌入批次 9/63, 大小: 10
+2025-05-10 13:14:20 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:14:20 [INFO] app.llm.llm_integration: 处理嵌入批次 10/63, 大小: 10
+2025-05-10 13:14:21 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:14:22 [INFO] app.llm.llm_integration: 处理嵌入批次 11/63, 大小: 10
+2025-05-10 13:14:23 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:14:23 [INFO] app.llm.llm_integration: 处理嵌入批次 12/63, 大小: 10
+2025-05-10 13:14:26 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:14:26 [INFO] app.llm.llm_integration: 处理嵌入批次 13/63, 大小: 10
+2025-05-10 13:14:27 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:14:27 [INFO] app.llm.llm_integration: 处理嵌入批次 14/63, 大小: 10
+2025-05-10 13:14:28 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:14:29 [INFO] app.llm.llm_integration: 处理嵌入批次 15/63, 大小: 10
+2025-05-10 13:14:30 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:14:30 [INFO] app.llm.llm_integration: 处理嵌入批次 16/63, 大小: 10
+2025-05-10 13:14:32 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 400 Bad Request"
+2025-05-10 13:14:32 [ERROR] app.llm.llm: Embedding API error: Error code: 400 - {'error': {'code': 'InvalidParameter', 'param': None, 'message': 'Range of input length should be [1, 8192]', 'type': 'InvalidParameter'}, 'id': 'f58c99b4-ac2c-961c-846d-fa7ece4e7b8c', 'request_id': 'f58c99b4-ac2c-961c-846d-fa7ece4e7b8c'}
+2025-05-10 13:14:32 [ERROR] app.llm.llm_integration: 批次 16 获取向量嵌入失败
+2025-05-10 13:15:10 [INFO] app.llm.llm_integration: 处理嵌入批次 1/1, 大小: 1
+2025-05-10 13:15:56 [INFO] openai._base_client: Retrying request to /embeddings in 0.449019 seconds
+2025-05-10 13:15:58 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:15:58 [WARNING] app.vectordb.faiss_store: FAISS索引为空或未初始化，无法执行搜索
+2025-05-10 13:16:34 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 13:16:37 [WARNING] app.llm.llm_integration: 文本 #64 已从 12826 字符截断至 8192 字符
+2025-05-10 13:16:37 [WARNING] app.llm.llm_integration: 文本 #159 已从 14648 字符截断至 8192 字符
+2025-05-10 13:16:37 [INFO] app.llm.llm_integration: 处理嵌入批次 1/63, 大小: 10
+2025-05-10 13:16:39 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:16:40 [INFO] app.llm.llm_integration: 处理嵌入批次 2/63, 大小: 10
+2025-05-10 13:16:40 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:16:41 [INFO] app.llm.llm_integration: 处理嵌入批次 3/63, 大小: 10
+2025-05-10 13:16:42 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:16:43 [INFO] app.llm.llm_integration: 处理嵌入批次 4/63, 大小: 10
+2025-05-10 13:16:44 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:16:44 [INFO] app.llm.llm_integration: 处理嵌入批次 5/63, 大小: 10
+2025-05-10 13:16:46 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:16:46 [INFO] app.llm.llm_integration: 处理嵌入批次 6/63, 大小: 10
+2025-05-10 13:16:47 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:16:48 [INFO] app.llm.llm_integration: 处理嵌入批次 7/63, 大小: 10
+2025-05-10 13:16:49 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:16:50 [INFO] app.llm.llm_integration: 处理嵌入批次 8/63, 大小: 10
+2025-05-10 13:16:51 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:16:51 [INFO] app.llm.llm_integration: 处理嵌入批次 9/63, 大小: 10
+2025-05-10 13:16:52 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:16:53 [INFO] app.llm.llm_integration: 处理嵌入批次 10/63, 大小: 10
+2025-05-10 13:16:54 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:16:55 [INFO] app.llm.llm_integration: 处理嵌入批次 11/63, 大小: 10
+2025-05-10 13:16:56 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:16:56 [INFO] app.llm.llm_integration: 处理嵌入批次 12/63, 大小: 10
+2025-05-10 13:16:57 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:16:57 [INFO] app.llm.llm_integration: 处理嵌入批次 13/63, 大小: 10
+2025-05-10 13:16:58 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:16:59 [INFO] app.llm.llm_integration: 处理嵌入批次 14/63, 大小: 10
+2025-05-10 13:17:00 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:00 [INFO] app.llm.llm_integration: 处理嵌入批次 15/63, 大小: 10
+2025-05-10 13:17:02 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:02 [INFO] app.llm.llm_integration: 处理嵌入批次 16/63, 大小: 10
+2025-05-10 13:17:04 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:04 [INFO] app.llm.llm_integration: 处理嵌入批次 17/63, 大小: 10
+2025-05-10 13:17:05 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:05 [INFO] app.llm.llm_integration: 处理嵌入批次 18/63, 大小: 10
+2025-05-10 13:17:07 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:07 [INFO] app.llm.llm_integration: 处理嵌入批次 19/63, 大小: 10
+2025-05-10 13:17:09 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:09 [INFO] app.llm.llm_integration: 处理嵌入批次 20/63, 大小: 10
+2025-05-10 13:17:10 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:11 [INFO] app.llm.llm_integration: 处理嵌入批次 21/63, 大小: 10
+2025-05-10 13:17:12 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:12 [INFO] app.llm.llm_integration: 处理嵌入批次 22/63, 大小: 10
+2025-05-10 13:17:14 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:14 [INFO] app.llm.llm_integration: 处理嵌入批次 23/63, 大小: 10
+2025-05-10 13:17:15 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:15 [INFO] app.llm.llm_integration: 处理嵌入批次 24/63, 大小: 10
+2025-05-10 13:17:17 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:17 [INFO] app.llm.llm_integration: 处理嵌入批次 25/63, 大小: 10
+2025-05-10 13:17:18 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:18 [INFO] app.llm.llm_integration: 处理嵌入批次 26/63, 大小: 10
+2025-05-10 13:17:19 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:20 [INFO] app.llm.llm_integration: 处理嵌入批次 27/63, 大小: 10
+2025-05-10 13:17:21 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:22 [INFO] app.llm.llm_integration: 处理嵌入批次 28/63, 大小: 10
+2025-05-10 13:17:24 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:24 [INFO] app.llm.llm_integration: 处理嵌入批次 29/63, 大小: 10
+2025-05-10 13:17:25 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:25 [INFO] app.llm.llm_integration: 处理嵌入批次 30/63, 大小: 10
+2025-05-10 13:17:27 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:27 [INFO] app.llm.llm_integration: 处理嵌入批次 31/63, 大小: 10
+2025-05-10 13:17:28 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:29 [INFO] app.llm.llm_integration: 处理嵌入批次 32/63, 大小: 10
+2025-05-10 13:17:30 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:30 [INFO] app.llm.llm_integration: 处理嵌入批次 33/63, 大小: 10
+2025-05-10 13:17:31 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:32 [INFO] app.llm.llm_integration: 处理嵌入批次 34/63, 大小: 10
+2025-05-10 13:17:33 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:33 [INFO] app.llm.llm_integration: 处理嵌入批次 35/63, 大小: 10
+2025-05-10 13:17:34 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:35 [INFO] app.llm.llm_integration: 处理嵌入批次 36/63, 大小: 10
+2025-05-10 13:17:36 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:36 [INFO] app.llm.llm_integration: 处理嵌入批次 37/63, 大小: 10
+2025-05-10 13:17:37 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:38 [INFO] app.llm.llm_integration: 处理嵌入批次 38/63, 大小: 10
+2025-05-10 13:17:39 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:39 [INFO] app.llm.llm_integration: 处理嵌入批次 39/63, 大小: 10
+2025-05-10 13:17:40 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:41 [INFO] app.llm.llm_integration: 处理嵌入批次 40/63, 大小: 10
+2025-05-10 13:17:42 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:43 [INFO] app.llm.llm_integration: 处理嵌入批次 41/63, 大小: 10
+2025-05-10 13:17:44 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:44 [INFO] app.llm.llm_integration: 处理嵌入批次 42/63, 大小: 10
+2025-05-10 13:17:45 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:46 [INFO] app.llm.llm_integration: 处理嵌入批次 43/63, 大小: 10
+2025-05-10 13:17:47 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:47 [INFO] app.llm.llm_integration: 处理嵌入批次 44/63, 大小: 10
+2025-05-10 13:17:48 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:48 [INFO] app.llm.llm_integration: 处理嵌入批次 45/63, 大小: 10
+2025-05-10 13:17:49 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:49 [INFO] app.llm.llm_integration: 处理嵌入批次 46/63, 大小: 10
+2025-05-10 13:17:51 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:51 [INFO] app.llm.llm_integration: 处理嵌入批次 47/63, 大小: 10
+2025-05-10 13:17:52 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:52 [INFO] app.llm.llm_integration: 处理嵌入批次 48/63, 大小: 10
+2025-05-10 13:17:54 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:54 [INFO] app.llm.llm_integration: 处理嵌入批次 49/63, 大小: 10
+2025-05-10 13:17:55 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:56 [INFO] app.llm.llm_integration: 处理嵌入批次 50/63, 大小: 10
+2025-05-10 13:17:57 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:57 [INFO] app.llm.llm_integration: 处理嵌入批次 51/63, 大小: 10
+2025-05-10 13:17:59 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:17:59 [INFO] app.llm.llm_integration: 处理嵌入批次 52/63, 大小: 10
+2025-05-10 13:18:00 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:18:01 [INFO] app.llm.llm_integration: 处理嵌入批次 53/63, 大小: 10
+2025-05-10 13:18:02 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:18:02 [INFO] app.llm.llm_integration: 处理嵌入批次 54/63, 大小: 10
+2025-05-10 13:18:03 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:18:03 [INFO] app.llm.llm_integration: 处理嵌入批次 55/63, 大小: 10
+2025-05-10 13:18:04 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:18:05 [INFO] app.llm.llm_integration: 处理嵌入批次 56/63, 大小: 10
+2025-05-10 13:18:06 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:18:07 [INFO] app.llm.llm_integration: 处理嵌入批次 57/63, 大小: 10
+2025-05-10 13:18:08 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:18:08 [INFO] app.llm.llm_integration: 处理嵌入批次 58/63, 大小: 10
+2025-05-10 13:18:09 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:18:10 [INFO] app.llm.llm_integration: 处理嵌入批次 59/63, 大小: 10
+2025-05-10 13:18:11 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:18:12 [INFO] app.llm.llm_integration: 处理嵌入批次 60/63, 大小: 10
+2025-05-10 13:18:12 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:18:13 [INFO] app.llm.llm_integration: 处理嵌入批次 61/63, 大小: 10
+2025-05-10 13:18:14 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:18:15 [INFO] app.llm.llm_integration: 处理嵌入批次 62/63, 大小: 10
+2025-05-10 13:18:17 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:18:17 [INFO] app.llm.llm_integration: 处理嵌入批次 63/63, 大小: 6
+2025-05-10 13:18:18 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:18:18 [INFO] app.vectordb.faiss_store: 将 626 个嵌入添加到FAISS索引...
+2025-05-10 13:18:18 [INFO] app.vectordb.faiss_store: 保存FAISS索引到: /Users/phcool/Documents/code_files/news_chat/data/faiss_index.index
+2025-05-10 13:18:19 [INFO] app.vectordb.faiss_store: 成功保存索引和元数据，包含 626 篇文章
+2025-05-10 13:18:19 [INFO] app.vectordb.faiss_store: 成功添加并保存 626 篇文章到索引
+2025-05-10 13:23:30 [INFO] app.llm.llm_integration: 处理嵌入批次 1/1, 大小: 1
+2025-05-10 13:23:32 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:23:34 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 13:26:24 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 13:26:30 [INFO] app.llm.llm_integration: 处理嵌入批次 1/1, 大小: 1
+2025-05-10 13:26:35 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:26:37 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 13:27:27 [INFO] app.llm.llm_integration: 处理嵌入批次 1/1, 大小: 1
+2025-05-10 13:27:28 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:27:30 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 13:29:03 [INFO] app.llm.llm_integration: 处理嵌入批次 1/1, 大小: 1
+2025-05-10 13:29:04 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:29:05 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 13:30:03 [INFO] app.llm.llm_integration: 处理嵌入批次 1/1, 大小: 1
+2025-05-10 13:30:05 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 13:30:06 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 13:42:44 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 13:43:25 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 13:49:47 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 14:25:16 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 15:05:42 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 15:10:05 [INFO] app.utils.logging_config: Logging initialized with level: INFO
+2025-05-10 15:10:08 [INFO] app.llm.llm_integration: 处理嵌入批次 1/1, 大小: 1
+2025-05-10 15:10:09 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-10 15:10:10 [INFO] httpx: HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"

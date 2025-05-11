@@ -1,0 +1,298 @@
+{% extends "base.html" %}
+
+{% block title %}AI聊天 - 新闻聊天系统{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-10 mb-4">
+        <div class="card shadow-sm">
+            <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                <h3 class="mb-0">
+                    <i class="fas fa-comments me-2"></i>AI聊天助手
+                </h3>
+                <button class="btn btn-sm btn-outline-secondary" id="clearChatBtn">
+                    <i class="fas fa-broom me-1"></i>清空聊天
+                </button>
+            </div>
+            <div class="card-body p-0">
+                <div class="chat-container" id="chatContainer">
+                    <!-- 欢迎消息 -->
+                    <div class="chat-message ai-message">
+                        <div class="chat-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="chat-content">
+                            <div class="chat-bubble">
+                                <p>你好！我是AI助手，可以为你提供新闻信息和相关解读。有什么可以帮你的吗？</p>
+                            </div>
+                            <div class="chat-time">现在</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 引用内容模板 -->
+                <template id="contextTemplate">
+                    <div class="context-container mt-2">
+                        <div class="context-title d-flex align-items-center">
+                            <i class="fas fa-quote-left me-2 text-muted"></i>
+                            <span>引用内容</span>
+                        </div>
+                        <div class="context-items">
+                            <!-- 上下文项目将在这里动态插入 -->
+                        </div>
+                    </div>
+                </template>
+                
+                <!-- 输入区域 -->
+                <div class="chat-input-container p-3 border-top">
+                    <form id="chatForm">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="userMessage" 
+                                   placeholder="输入你的问题..." required>
+                            <button class="btn btn-primary" type="submit" id="sendButton">
+                                <i class="fas fa-paper-plane me-1"></i>发送
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 用户消息模板 -->
+<template id="userMessageTemplate">
+    <div class="chat-message user-message">
+        <div class="chat-content">
+            <div class="chat-bubble">
+                <p></p>
+            </div>
+            <div class="chat-time"></div>
+        </div>
+        <div class="chat-avatar">
+            <i class="fas fa-user"></i>
+        </div>
+    </div>
+</template>
+
+<!-- AI消息模板 -->
+<template id="aiMessageTemplate">
+    <div class="chat-message ai-message">
+        <div class="chat-avatar">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="chat-content">
+            <div class="chat-bubble">
+                <p></p>
+            </div>
+            <div class="chat-time"></div>
+        </div>
+    </div>
+</template>
+
+<!-- AI思考状态模板 -->
+<template id="aiThinkingTemplate">
+    <div class="thinking-indicator">
+        <div class="dot-typing"></div>
+    </div>
+</template>
+
+<!-- 上下文项目模板 -->
+<template id="contextItemTemplate">
+    <div class="context-item">
+        <a href="#" target="_blank" class="context-link">
+            <i class="fas fa-newspaper me-1"></i>
+            <span class="context-title"></span>
+        </a>
+    </div>
+</template>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .chat-container {
+        height: 60vh;
+        overflow-y: auto;
+        padding: 1rem;
+    }
+    
+    .chat-message {
+        display: flex;
+        margin-bottom: 1rem;
+    }
+    
+    .user-message {
+        flex-direction: row-reverse;
+    }
+    
+    .chat-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #e9ecef;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+    
+    .user-message .chat-avatar {
+        background-color: #007bff;
+        color: white;
+    }
+    
+    .ai-message .chat-avatar {
+        background-color: #6c757d;
+        color: white;
+    }
+    
+    .chat-content {
+        margin: 0 10px;
+        max-width: 75%;
+    }
+    
+    .chat-bubble {
+        padding: 0.8rem 1rem;
+        background-color: #f8f9fa;
+        border-radius: 1rem;
+        border-bottom-left-radius: 0;
+    }
+    
+    .user-message .chat-bubble {
+        background-color: #e7f3ff;
+        border-radius: 1rem;
+        border-bottom-right-radius: 0;
+    }
+    
+    /* 流式输出的打字机效果 */
+    .ai-message .chat-bubble p {
+        white-space: pre-wrap;
+        word-break: break-word;
+        min-height: 1.2em;
+    }
+    
+    /* 添加光标效果 */
+    .ai-message.typing .chat-bubble p:after {
+        content: '|';
+        opacity: 1;
+        animation: cursor-blink 1s infinite;
+        font-weight: normal;
+        display: inline-block;
+        width: 0.5em;
+        margin-left: 1px;
+    }
+    
+    @keyframes cursor-blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+    
+    .chat-time {
+        font-size: 0.75rem;
+        color: #6c757d;
+        margin-top: 0.3rem;
+    }
+    
+    /* 新增错误消息样式 */
+    .chat-error {
+        background-color: #fff2f0;
+        border-left: 4px solid #ff4d4f;
+        padding: 0.5rem 1rem;
+        margin-top: 0.5rem;
+        border-radius: 0.25rem;
+        color: #cf1322;
+        font-size: 0.9rem;
+    }
+    
+    .thinking-indicator {
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 50px 1rem;
+    }
+    
+    .dot-typing {
+        position: relative;
+        width: 6px;
+        height: 6px;
+        border-radius: 5px;
+        background-color: #9880ff;
+        color: #9880ff;
+        animation: dotTyping 1.5s infinite linear;
+    }
+    
+    .dot-typing::before,
+    .dot-typing::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 6px;
+        height: 6px;
+        border-radius: 5px;
+        background-color: #9880ff;
+        color: #9880ff;
+    }
+    
+    .dot-typing::before {
+        left: -12px;
+        animation: dotTypingBefore 1.5s infinite linear;
+    }
+    
+    .dot-typing::after {
+        left: 12px;
+        animation: dotTypingAfter 1.5s infinite linear;
+    }
+    
+    @keyframes dotTyping {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.5); }
+        100% { transform: scale(1); }
+    }
+    
+    @keyframes dotTypingBefore {
+        0% { transform: scale(1); }
+        25% { transform: scale(1.5); }
+        100% { transform: scale(1); }
+    }
+    
+    @keyframes dotTypingAfter {
+        0% { transform: scale(1); }
+        75% { transform: scale(1.5); }
+        100% { transform: scale(1); }
+    }
+    
+    .context-container {
+        background-color: #f8f9fa;
+        border-radius: 0.5rem;
+        padding: 0.75rem;
+        margin-top: 0.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .context-title {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #6c757d;
+    }
+    
+    .context-item {
+        margin-bottom: 0.3rem;
+    }
+    
+    .context-link {
+        color: #0d6efd;
+        text-decoration: none;
+    }
+    
+    .context-link:hover {
+        text-decoration: underline;
+    }
+    
+    #chatForm {
+        position: relative;
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock %} 

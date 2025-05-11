@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block title %}新闻聊天 - 智能新闻助手{% endblock %}
+
+{% block content %}
+<!-- 侧边栏切换按钮 -->
+<div class="news-toggle-btn d-none" id="news-toggle-btn">
+    <i class="fas fa-newspaper"></i>
+</div>
+
+<!-- 新闻侧边栏 -->
+<div class="news-sidebar" id="news-sidebar">
+    <div class="news-sidebar-header">
+        <h5><i class="fas fa-newspaper me-2"></i>引用</h5>
+        <button class="btn-close" id="news-sidebar-close"></button>
+    </div>
+    <div class="news-sidebar-body" id="news-sidebar-body">
+        <div class="empty-message text-center text-muted py-4">
+            <i class="fas fa-info-circle mb-2 d-block" style="font-size: 2rem;"></i>
+            暂无引用的新闻，开始对话后会在这里显示相关文章
+        </div>
+    </div>
+</div>
+
+<!-- 添加RSS源对话框 -->
+<div class="modal fade" id="addRssModal" tabindex="-1" aria-labelledby="addRssModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addRssModalLabel"><i class="fas fa-rss me-2"></i>添加RSS源</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addRssForm">
+                    <div class="mb-3">
+                        <label for="rss-url" class="form-label">RSS链接 <span class="text-danger">*</span></label>
+                        <input type="url" class="form-control" id="rss-url" required placeholder="https://example.com/feed.xml">
+                        <div class="form-text">输入有效的RSS feed URL</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="rss-title" class="form-label">标题 <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="rss-title" required placeholder="例如：某某新闻">
+                    </div>
+                    <div class="mb-3">
+                        <label for="rss-description" class="form-label">描述</label>
+                        <textarea class="form-control" id="rss-description" rows="2" placeholder="可选：简要描述此RSS源"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="rss-attribute" class="form-label">属性</label>
+                        <input type="text" class="form-control" id="rss-attribute" placeholder="可选：例如 renminwang">
+                        <div class="form-text">用于分类或标识RSS源的属性</div>
+                    </div>
+                </form>
+                <div id="rss-add-status" class="alert d-none"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="addRssSubmit">
+                    <span class="spinner-border spinner-border-sm d-none" id="rss-loading"></span>
+                    添加
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 聊天区域 - 开始时隐藏 -->
+<div class="chat-container" id="chat-container">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h2></h2>
+            <div>
+                <button class="btn btn-outline-primary" id="new-chat-btn">
+                    <i class="fas fa-plus me-1"></i>新对话
+                </button>
+            </div>
+        </div>
+        <div class="card-body">
+            <div id="chat-messages"></div>
+            
+            <div id="context-container" class="mb-3 mt-3 d-none">
+                <h6 class="text-muted"><i class="fas fa-book me-2"></i>参考资料</h6>
+                <div id="context-list" class="context-list"></div>
+            </div>
+            
+            <div id="typing-indicator" class="typing-indicator d-none">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="input-group">
+                <input type="text" id="chat-input" class="form-control" placeholder="输入您的问题..." disabled>
+                <button id="send-button" class="btn btn-primary" disabled>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 搜索区域 -->
+<div class="search-container" id="search-container">
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='img/quicksee_logo.png') }}" alt="QuickSee Logo" style="width: 80px; height: 80px;">
+        <h1 class="display-4 fw-bold">QuickSee</h1>
+        <p class="lead">基于AI的智能新闻助手</p>
+    </div>
+    
+    <div class="search-box">
+        <input type="text" class="search-input" id="search-input" placeholder="有什么想了解的新闻？" autofocus>
+        <button class="search-button" id="search-button">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+    
+    <div class="text-center mt-3">
+        <button class="btn btn-outline-primary" id="view-rss-sources-btn">
+            <i class="fas fa-rss me-2"></i>查看订阅源
+        </button>
+    </div>
+</div>
+
+<!-- 查看RSS源对话框 -->
+<div class="modal fade" id="viewRssSourcesModal" tabindex="-1" aria-labelledby="viewRssSourcesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="viewRssSourcesModalLabel"><i class="fas fa-rss me-2"></i>已订阅的RSS源</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="rss-sources-list" class="rss-sources-list">
+                    <div class="text-center py-3">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mt-2">加载中...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock %} 

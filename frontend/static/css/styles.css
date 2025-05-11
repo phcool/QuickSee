@@ -1,0 +1,392 @@
+/* 
+ * 新闻聊天系统样式表
+ * 主样式文件，定义全局样式和组件
+ */
+
+/* 全局重置和基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --border-color: #dee2e6;
+  --success-color: #198754;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --body-bg: #f5f5f5;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--dark-color);
+  background-color: var(--body-bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* 容器 */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 导航栏 */
+.navbar {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.navbar-logo a {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-menu a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  font-weight: 500;
+}
+
+.navbar-menu a.active,
+.navbar-menu a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* 欢迎区域 */
+.welcome-section {
+  text-align: center;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.welcome-section h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.welcome-section p {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* 卡片样式 */
+.card {
+  background-color: white;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 1rem 1.25rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+/* 索引状态区域 */
+.index-info {
+  margin-bottom: 1rem;
+}
+
+.index-info p {
+  margin-bottom: 0.5rem;
+}
+
+.status-ok {
+  color: var(--success-color);
+}
+
+.status-warning {
+  color: var(--warning-color);
+}
+
+.status-error {
+  color: var(--danger-color);
+}
+
+.stats-list {
+  background-color: var(--light-color);
+  border-radius: 0.375rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+.stats-list li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.stats-list li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.index-actions {
+  margin-bottom: 1rem;
+}
+
+.index-update-status {
+  margin-top: 0.5rem;
+}
+
+/* 按钮样式 */
+.button {
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s, background-color 0.15s, border-color 0.15s;
+}
+
+.button.primary {
+  color: white;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.button.primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* 功能按钮区域 */
+.feature-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* 加载状态 */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  gap: 1rem;
+}
+
+.loader {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid var(--primary-color);
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 新闻列表 */
+.news-list {
+  margin: 0;
+  padding: 0;
+}
+
+.news-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.news-item:first-child {
+  padding-top: 0;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.news-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.news-title a {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+.news-title a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.news-meta {
+  font-size: 0.875rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.news-preview {
+  margin: 0;
+  color: var(--secondary-color);
+  font-size: 0.95rem;
+}
+
+/* 空状态和错误状态 */
+.empty-state, .error-state {
+  text-align: center;
+  padding: 2rem;
+  color: var(--secondary-color);
+}
+
+.error-state {
+  color: var(--danger-color);
+}
+
+/* 通知样式 */
+.notification {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background-color: white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  border-radius: 0.375rem;
+  z-index: 1030;
+  transform: translateX(120%);
+  transition: transform 0.3s ease-out;
+}
+
+.notification.show {
+  transform: translateX(0);
+}
+
+.notification-success {
+  border-left: 4px solid var(--success-color);
+}
+
+.notification-error {
+  border-left: 4px solid var(--danger-color);
+}
+
+.notification-warning {
+  border-left: 4px solid var(--warning-color);
+}
+
+/* 页脚 */
+.footer {
+  background-color: white;
+  border-top: 1px solid var(--border-color);
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer p {
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+/* 加载器的旋转动画 */
+.spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .navbar-menu {
+    gap: 1rem;
+  }
+
+  .welcome-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .feature-buttons {
+    flex-direction: column;
+  }
+
+  .card-header h2 {
+    font-size: 1.1rem;
+  }
+} 

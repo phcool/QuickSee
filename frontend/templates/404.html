@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}页面未找到 - 新闻聊天系统{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8 text-center py-5">
+        <div class="error-container mb-5">
+            <div class="display-1 text-primary fw-bold">404</div>
+            <h1 class="mb-4">页面未找到</h1>
+            <p class="lead text-muted mb-5">很抱歉，您请求的页面不存在或已被移除</p>
+            <a href="{{ url_for('frontend.index') }}" class="btn btn-primary btn-lg">
+                <i class="fas fa-home me-2"></i>返回首页
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %} 

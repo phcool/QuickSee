@@ -1,0 +1,62 @@
+[
+  {
+    "url": "http://www.people.com.cn/rss/politics.xml",
+    "title": "人民网时政新闻",
+    "简介": "人民网时政频道的最新资讯",
+    "属性": "renminwang",
+    "uuid": "8b269f8a-287d-5de0-9262-64d181dad056"
+  },
+  {
+    "url": "http://www.people.com.cn/rss/society.xml",
+    "title": "人民网社会新闻",
+    "简介": "人民网社会频道的最新资讯",
+    "属性": "renminwang",
+    "uuid": "68e8eb98-9826-5676-b55a-325a936a5501"
+  },
+  {
+    "url": "http://www.people.com.cn/rss/legal.xml",
+    "title": "人民网法治新闻",
+    "简介": "人民网法治频道的最新资讯",
+    "属性": "renminwang",
+    "uuid": "58148d83-63c2-5e57-8987-91c984937cdd"
+  },
+  {
+    "url": "http://www.people.com.cn/rss/world.xml",
+    "title": "人民网国际新闻",
+    "简介": "人民网国际频道的最新资讯",
+    "属性": "renminwang",
+    "uuid": "d44014da-81e7-56c5-a055-1df4dd767259"
+  },
+  {
+    "url": "http://www.people.com.cn/rss/haixia.xml",
+    "title": "人民网台港澳新闻",
+    "简介": "人民网台港澳频道的最新资讯",
+    "属性": "renminwang",
+    "uuid": "925078fa-b4b0-5530-b490-9f7d96fce65f"
+  },
+  {
+    "url": "http://www.people.com.cn/rss/military.xml",
+    "title": "人民网军事新闻",
+    "简介": "人民网军事频道的最新资讯",
+    "属性": "renminwang",
+    "uuid": "305398ff-c8e8-5f6c-9255-b35dc058f6d4"
+  },
+  {
+    "url": "https://feedx.net/rss/zhihudaily.xml",
+    "title": "知乎日报",
+    "简介": "知乎日报的最新资讯",
+    "属性": "zhihu",
+    "uuid": "c4081341-720c-51bc-a61d-8cb0676fcbeb"
+  },
+  {
+    "url": "https://plink.anyfeeder.com/guangmingribao",
+    "title": "光明日报",
+    "简介": "光明日报新闻",
+    "属性": "guangmingribao",
+    "uuid": "9075251b-3ed8-54f6-8da0-50cc0b41fcad"
+  },
+  {
+    "url": "https://arxiv.org/rss/cs.LG",
+    "title": "arxiv"
+  }
+]
